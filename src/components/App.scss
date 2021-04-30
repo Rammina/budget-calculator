@@ -1,0 +1,234 @@
+@import "../utils/variables.scss";
+
+#app-outer-container {
+  display: flex;
+}
+
+.page-container {
+  margin: 0;
+  display: block;
+  min-height: calc(100vh + 0rem);
+  width: 100vw;
+  height: auto;
+  background-color: $login-background-color;
+}
+
+#settings-page {
+  z-index: 90;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.heading-title {
+  display: none;
+  margin: 0;
+  color: $main-mint;
+  font-size: 3.25rem;
+  font-family: $headingFont;
+  // text-shadow: 1px 1px 0px #b7a2ceca, 2px 2px 1px #e3c9ffca,
+  //   2px 2px 1px #e3c9ffca, 3px 3px 1px #f4ecffca;
+  text-shadow: 0px 0px 1px #121, 0px 0px 1.5px #332, 1px 1px 0px #bb9bce,
+    1.5px 1.5px 3px #fcf, -0.5px -0.5px 0px #212;
+}
+
+#login-form,
+#register-form,
+#join-form {
+  background-color: $login-form-foreground-color;
+  margin: $center-margin;
+  min-height: 100vh;
+  height: auto;
+}
+
+.form-content-container {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  // margin-bottom: 1rem;
+  color: $textFontColor;
+}
+
+.form-button-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.form-button-link {
+  margin: 0 calc(50% - 4rem);
+}
+
+.form-button.submit {
+  color: $tertiary-black !important;
+  // text-transform: uppercase;
+  text-decoration: none;
+  background: $light-mint;
+  padding: 0.5rem;
+  margin: $center-margin;
+  margin-top: 0.25rem;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  width: 85%;
+  max-width: 22rem;
+  min-width: 11rem;
+  min-height: 3rem;
+  font-family: $textFont;
+  font-size: 1.05rem;
+}
+
+.form-button.submit.warning {
+  background-color: $warningBackgroundColor;
+}
+
+.form-button.submit.danger {
+  text-transform: uppercase;
+  color: $textFontWhite !important;
+  background-color: $dangerBackgroundColor;
+}
+
+.form-button.submit:hover {
+  background-color: $light-mint-hover;
+}
+
+.form-button.submit.warning:hover {
+  background-color: $warningBackgroundColorHover;
+}
+
+.form-button.submit.danger:hover {
+  background-color: $dangerBackgroundColorHover;
+}
+
+.sidebar-outer-container {
+  z-index: 12;
+  position: relative;
+  display: flex;
+  width: fit-content;
+}
+
+.sidebar-outer-container.hide {
+  z-index: 1;
+  // visibility: hidden;
+}
+
+.form-submit-loader-container {
+  position: relative;
+  top: 0.7rem;
+  width: 100%;
+  text-align: center;
+  // margin-top: 1rem;
+}
+
+.small-text-link {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #b6d7e6;
+}
+
+.small-text-link:hover {
+  text-decoration: underline;
+}
+
+.white-border-top {
+  border-top: 1px solid #fff3;
+}
+
+.mt-1-r {
+  margin-top: 1rem;
+}
+
+.section-heading {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  #register-form,
+  #login-form,
+  #join-form {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 750px) and (min-height: 600px) {
+  .page-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #register-form,
+  #login-form,
+  #join-form {
+    padding: 0 1rem;
+    // padding-bottom: 2rem;
+    border-radius: 3px;
+    border: 1px solid #afa6;
+    // box-shadow: 5px 5px 5px -5px #eee;
+    box-shadow: 0 0 4px #efe8;
+    // -webkit-box-shadow: 0px 0px 0px 1px #afffe5, 0px 0px 1px 2px #edd8ff;
+    // box-shadow: 0px 0px 0px 1px #afffe5, 0px 0px 1px 2px #edd8ff;
+    max-width: 32rem;
+    height: auto;
+    min-height: 0;
+  }
+
+  .form-content-container {
+    // position: relative;
+    // padding: 2rem;
+    padding-top: 3.5rem;
+    width: 80%;
+    // margin: $center-margin;
+    // margin-top: 2rem;
+    // padding-top: 4rem;
+    // top: 2rem;
+    height: auto;
+    min-height: 0;
+    max-width: 32rem;
+  }
+
+  .heading-title {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    // margin-top: 5rem;
+    text-align: center;
+    padding-bottom: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-height: 600px) {
+  #register-form,
+  #login-form,
+  #join-form {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    height: auto;
+  }
+
+  .form-content-container {
+    padding-top: 0.75rem;
+    // overflow-y: auto;
+  }
+  .form-button-container.two-buttons-container {
+    margin-top: 1rem;
+    max-width: 20rem;
+  }
+  .form-button.submit {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: fit-content;
+    min-width: 6rem;
+    max-width: 22rem;
+    min-height: 2.8rem;
+    margin: 0 1rem;
+  }
+  .form-button-container.two-buttons-container.mt-2-rem {
+    margin-top: 2rem;
+  }
+}

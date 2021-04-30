@@ -6,10 +6,11 @@ import { connect } from "react-redux";
 import { Router, Route, Redirect } from "react-router-dom";
 import history from "../history";
 
-import AuthenticatedRoute from "../routeWrappers/AuthenticatedRoute";
-import UnauthenticatedRoute from "../routeWrappers/UnauthenticatedRoute";
-import AuthLoader from "./UIComponents/AuthLoader/AuthLoader";
+import AuthenticatedRoute from "./routeWrappers/AuthenticatedRoute";
+import UnauthenticatedRoute from "./routeWrappers/UnauthenticatedRoute";
+// import AuthLoader from "./UIComponents/AuthLoader/AuthLoader";
 
+// to be used later
 // import {} from "./AppContext";
 // import { loadUser } from "../flux/actions/authActions";
 // import * as constants from "../utils/constants.js";
