@@ -1,7 +1,10 @@
+// syntax notes can be found at the bottom
+
 // font variables
 $headingFont: "Patrick Hand", cursive;
 $textFont: "Roboto", sans-serif;
 // color variables
+//   font
 $mainWhiteColor: #f0e6f0;
 $textFontColor: #f0e6f0;
 $textFontColorSlightDim: #eee3ee;
@@ -11,7 +14,7 @@ $textFontWhite: #fff;
 $textFontColorGray: #322a32;
 // $messageTextColor: #232628;
 $messageTextColor: $textFontColor;
-
+//   backgrounds
 $main-pink: #dbbadd;
 $affirm-green: #1eb090;
 $affirm-green-dim: #1a9479;
@@ -42,3 +45,65 @@ $dangerBackgroundColorHover: #d02727;
 // modal variables
 $modalBorderColor: #5664;
 $floatingButtonBorderColor: #788a;
+
+// syntax
+// $variable: value;
+
+/* map structure
+  font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+  );
+*/
+
+/*
+ & can be used for appending
+  .main {
+    width: 80%;
+    margin: 0 auto;
+
+    &__paragraph{
+      font-weight: map-get($font-weights, bold);
+    }
+  }
+
+  results to (CSS):
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .main__paragraph{
+    font-weight: 700;
+  }
+
+  #{&} is interpolation
+  .main {
+    width: 80%;
+    margin: 0 auto;
+
+    #{&}__paragraph{
+      font-weight: map-get($font-weights, bold);
+
+      // appending :hover using &
+      &:hover {
+        color: pink;
+      }
+    }
+  }
+
+  results to (CSS):
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .main .main__paragraph{
+    font-weight: 700;
+  }
+
+  .main .main__paragraph:hover{
+    color: pink;
+  }
+*/
