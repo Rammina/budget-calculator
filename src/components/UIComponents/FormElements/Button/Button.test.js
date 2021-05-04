@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { findByTestAttributes, storeFactory } from "../../../..test/testUtils";
+import { findByTestAttributes, storeFactory } from "../../../../test/testUtils";
 
 import Button from "./Button";
 
@@ -26,3 +26,4 @@ test("component renders without error", () => {
   const component = findByTestAttributes(wrapper, "component-button");
   expect(component.length).toBe(1);
 });
+// .comment

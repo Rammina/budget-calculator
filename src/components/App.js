@@ -15,6 +15,25 @@ import UnauthenticatedRoute from "./routeWrappers/UnauthenticatedRoute";
 // import { loadUser } from "../flux/actions/authActions";
 // import * as constants from "../utils/constants.js";
 
+onLoadAuthSetup = async () => {
+  try {
+    console.log("authentication setup...");
+
+    const { attributes } = await Auth.currentAuthenticatedUser();
+    const userId = attributes.sub;
+    console.log(attributes);
+    console.log(attributes.sub);
+
+    this.props.authSignIn({ userId, authMethod: "cognito" });
+  } catch (e) {
+    if (e !== "No current user") {
+      console.log(e);
+    }
+  }
+
+  this.setState({ isAuthenticating: false });
+};
+
 export const App = (props) => {
   //note: add chat for logged in users
   return <div id="app-outer-container" data-test="component-app"></div>;

@@ -14,6 +14,24 @@ import {
   REGISTER_FAIL,
 } from "./types";
 
+//Auth functions
+export const authSignIn = ({ authMethod, userId }) => {
+  return async function (dispatch) {
+    dispatch({
+      type: actionTypes.AUTH_SIGN_IN,
+      payload: { authMethod, userId },
+    });
+  };
+};
+
+export const authSignOut = () => {
+  return async function (dispatch) {
+    dispatch({
+      type: actionTypes.AUTH_SIGN_OUT,
+    });
+  };
+};
+
 // Check token & load user
 export const loadUser = () => (dispatch, getState) => {
   // User loading
