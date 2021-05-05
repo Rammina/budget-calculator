@@ -5,7 +5,7 @@ import React from "react";
 const Auth = () => {
   return (
     <div className="auth page-container">
-      <h1 className="heading-title">Amussement</h1>
+      <h1 className="heading-title">May's Budget Calculator</h1>
       {props.children}
     </div>
   );

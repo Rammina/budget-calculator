@@ -72,8 +72,8 @@ const LoginForm = (props) => {
   };
 
   return (
-    <form id="login-form" autoComplete="off">
-      <div className="login form-content-container">
+    <form id="auth-form" autoComplete="off">
+      <div className="auth form-content-container">
         <div className="door-title-container">
           <h2 className="heading">Login</h2>
         </div>
@@ -89,13 +89,13 @@ const LoginForm = (props) => {
                 className: "textfield",
                 maxLength: "64",
                 autoComplete: "off",
-                id: "login-form-email-field",
+                id: "auth-form-email-field",
                 autoFocus: true,
               },
               labelProps: {
                 class: "textfield-label",
                 text: "Email",
-                id: "login-form-email-label",
+                id: "auth-form-email-label",
               },
             }}
           />
@@ -112,12 +112,12 @@ const LoginForm = (props) => {
                 maxLength: "30",
                 autoComplete: "off",
                 type: "password",
-                id: "login-form-password-field",
+                id: "auth-form-password-field",
               },
               labelProps: {
                 class: "textfield-label",
                 text: "Password",
-                id: "login-form-password-label",
+                id: "auth-form-password-label",
               },
             }}
           />

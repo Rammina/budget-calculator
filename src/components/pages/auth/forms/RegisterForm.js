@@ -68,8 +68,8 @@ const RegisterForm = (props) => {
   };
 
   return (
-    <form id="register-form" autoComplete="off">
-      <div className="register form-content-container">
+    <form id="auth-form" autoComplete="off">
+      <div className="auth form-content-container">
         <div className="door-title-container">
           <h2 className="heading">Create an account</h2>
         </div>
@@ -85,13 +85,13 @@ const RegisterForm = (props) => {
                 className: "textfield",
                 maxLength: "64",
                 autoComplete: "off",
-                id: "register-form-email-field",
+                id: "auth-form-email-field",
                 autoFocus: true,
               },
               labelProps: {
                 class: "textfield-label",
                 text: "Email *",
-                id: "register-form-email-label",
+                id: "auth-form-email-label",
               },
             }}
           />
@@ -107,12 +107,12 @@ const RegisterForm = (props) => {
                 className: "textfield",
                 maxLength: "30",
                 autoComplete: "off",
-                id: "register-form-username-field",
+                id: "auth-form-username-field",
               },
               labelProps: {
                 class: "textfield-label",
                 text: "Username *",
-                id: "register-form-username-label",
+                id: "auth-form-username-label",
               },
             }}
           />
@@ -129,12 +129,12 @@ const RegisterForm = (props) => {
                 maxLength: "30",
                 autoComplete: "off",
                 type: "password",
-                id: "register-form-password-field",
+                id: "auth-form-password-field",
               },
               labelProps: {
                 class: "textfield-label",
                 text: "Password *",
-                id: "register-form-password-label",
+                id: "auth-form-password-label",
               },
             }}
           />
