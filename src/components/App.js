@@ -5,12 +5,15 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Router, Route, Redirect, Switch } from "react-router-dom";
 import { Auth } from "aws-amplify";
-import { authSignIn } from "../flux/actions";
+import { authSignIn } from "../flux/actions/authActions";
 import history from "../history";
 
 import AuthenticatedRoute from "./routeWrappers/AuthenticatedRoute";
 import UnauthenticatedRoute from "./routeWrappers/UnauthenticatedRoute";
-// import AuthLoader from "./UIComponents/AuthLoader/AuthLoader";
+import GoogleAuth from "./GoogleAuth/GoogleAuth";
+import ErrorPage from "./ErrorPage/ErrorPage";
+import AuthLoader from "./UIComponents/AuthLoader/AuthLoader";
+import AuthPage from "./pages/auth/AuthPage";
 
 // to be used later
 // import {} from "./AppContext";
@@ -59,6 +62,7 @@ export const App = (props) => {
     };
   }, []);
 
+  // cognito auth
   const onLoadAuthSetup = async () => {
     try {
       const { attributes } = await Auth.currentAuthenticatedUser();

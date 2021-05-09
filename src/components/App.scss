@@ -36,7 +36,7 @@
 #register-form,
 #join-form {
   background-color: $login-form-foreground-color;
-  margin: $center-margin;
+  margin: 0 auto;
   min-height: 100vh;
   height: auto;
 }
@@ -70,7 +70,7 @@
   text-decoration: none;
   background: $light-mint;
   padding: 0.5rem;
-  margin: $center-margin;
+  margin: 0 auto;
   margin-top: 0.25rem;
   border-radius: 5px;
   display: inline-block;
@@ -183,7 +183,7 @@
     // padding: 2rem;
     padding-top: 3.5rem;
     width: 80%;
-    // margin: $center-margin;
+    // margin: 0 auto;
     // margin-top: 2rem;
     // padding-top: 4rem;
     // top: 2rem;

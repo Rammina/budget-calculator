@@ -423,7 +423,7 @@ textarea {
   width: 100%;
   // max-height: 4rem;
   padding: 0.7rem 0.5rem;
-  margin: $center-margin;
+  margin: 0 auto;
   max-width: 25rem;
 }
 
@@ -433,7 +433,7 @@ textarea {
   width: 90%;
   max-width: 25rem;
   font-size: 1.05rem;
-  margin: $center-margin;
+  margin: 0 auto;
 }
 
 .error {
@@ -447,7 +447,7 @@ textarea {
 .textfield {
   border-radius: 0;
   padding: 15px 20px;
-  margin: $center-margin;
+  margin: 0 auto;
   margin-top: 0.7rem;
   width: 100%;
   position: relative;
