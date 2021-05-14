@@ -1,15 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import { authSignIn, authSignOut } from "../../actions";
-import { AuthContext } from "../AppContext";
-import history from "../../history";
+import { authSignIn, authSignOut } from "../../../../flux/actions/authActions";
+import history from "../../../../history";
 
 class GoogleAuth extends React.Component {
   _isMounted = false;
   state = {
     initialized: false,
   };
-  static contextType = AuthContext;
 
   componentDidMount() {
     this._isMounted = true;

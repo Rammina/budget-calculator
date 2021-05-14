@@ -1,4 +1,4 @@
-@import "../../utils/variables.scss";
+@import "../../../utils/scss/variables.scss";
 
 #auth-loader-outer-container {
   z-index: 600;
@@ -10,7 +10,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: $login-background-color;
+  background-color: $main-black;
   opacity: 1;
   transition: opacity 0.3s ease;
 }

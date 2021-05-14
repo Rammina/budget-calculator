@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import { findByTestAttributes } from "../test/testUtils";
 
-import AuthLoader from "./AuthLoader";
+import AuthPage from "./AuthPage";
 
 const defaultProps = {};
 
@@ -15,7 +15,7 @@ const defaultProps = {};
  */
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
-  return shallow(<AuthLoader {...setupProps} />);
+  return shallow(<AuthPage {...setupProps} />);
 };
 
 test("component renders without error", () => {

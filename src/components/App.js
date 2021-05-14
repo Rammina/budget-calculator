@@ -1,5 +1,5 @@
-// import "../shared.scss";
-// import "./App.scss";
+import "../shared.scss";
+import "./App.scss";
 
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
@@ -10,8 +10,8 @@ import history from "../history";
 
 import AuthenticatedRoute from "./routeWrappers/AuthenticatedRoute";
 import UnauthenticatedRoute from "./routeWrappers/UnauthenticatedRoute";
-import GoogleAuth from "./GoogleAuth/GoogleAuth";
-import ErrorPage from "./ErrorPage/ErrorPage";
+import GoogleAuth from "./pages/auth/GoogleAuth/GoogleAuth";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import AuthLoader from "./UIComponents/AuthLoader/AuthLoader";
 import AuthPage from "./pages/auth/AuthPage";
 
